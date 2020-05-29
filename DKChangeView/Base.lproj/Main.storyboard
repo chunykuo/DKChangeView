@@ -17,24 +17,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="c2E-gy-I4s">
-                                <rect key="frame" x="138" y="223.5" width="99" height="220"/>
+                                <rect key="frame" x="131.5" y="181" width="112.5" height="305.5"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PyA-l0-5fV">
+                                        <rect key="frame" x="0.0" y="0.0" width="112.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yz6-OD-FFS">
-                                        <rect key="frame" x="0.0" y="0.0" width="99" height="30"/>
+                                        <rect key="frame" x="6.5" y="85.5" width="99" height="30"/>
                                         <state key="normal" title="performSegue"/>
                                         <connections>
                                             <action selector="performSegue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f49-py-cZh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcO-aT-8wm">
-                                        <rect key="frame" x="23" y="95" width="53" height="30"/>
+                                        <rect key="frame" x="29.5" y="180.5" width="53" height="30"/>
                                         <state key="normal" title="present"/>
                                         <connections>
                                             <action selector="present:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Usu-NV-Ph0"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgC-fN-P8i">
-                                        <rect key="frame" x="32.5" y="190" width="34" height="30"/>
+                                        <rect key="frame" x="39" y="275.5" width="34" height="30"/>
                                         <state key="normal" title="push"/>
                                         <connections>
                                             <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TX4-Dd-OCC"/>
@@ -67,17 +73,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PushViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1o7-a3-dCr">
-                                <rect key="frame" x="112.5" y="323" width="150" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="77" translatesAutoresizingMaskIntoConstraints="NO" id="EWk-JK-CsT">
+                                <rect key="frame" x="98.5" y="163" width="178" height="341.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PushViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1o7-a3-dCr">
+                                        <rect key="frame" x="14" y="0.0" width="150" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEx-26-udJ">
+                                        <rect key="frame" x="52" y="97.5" width="74" height="30"/>
+                                        <state key="normal" title="popToRoot"/>
+                                        <connections>
+                                            <action selector="popToRootButtonPress" destination="rdR-RX-Gdo" eventType="touchUpInside" id="sOr-VE-UZX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PcZ-ok-FU5">
+                                        <rect key="frame" x="1" y="204.5" width="176" height="30"/>
+                                        <state key="normal" title="showAlertThenPopToRoot"/>
+                                        <connections>
+                                            <action selector="showAlertThenPopToRootButtonPress" destination="rdR-RX-Gdo" eventType="touchUpInside" id="FkT-aR-SUr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fN-gb-VFX">
+                                        <rect key="frame" x="0.0" y="311.5" width="178" height="30"/>
+                                        <state key="normal" title="popToRootThenShowAlert"/>
+                                        <connections>
+                                            <action selector="popToRootThenShowAlertButtonPress" destination="rdR-RX-Gdo" eventType="touchUpInside" id="adv-UL-04Q"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="1o7-a3-dCr" firstAttribute="centerX" secondItem="Obt-bW-o5H" secondAttribute="centerX" id="8dr-oY-Erv"/>
-                            <constraint firstItem="1o7-a3-dCr" firstAttribute="centerY" secondItem="Obt-bW-o5H" secondAttribute="centerY" id="jAK-87-etg"/>
+                            <constraint firstItem="EWk-JK-CsT" firstAttribute="centerX" secondItem="Obt-bW-o5H" secondAttribute="centerX" id="M8g-Mm-EkJ"/>
+                            <constraint firstItem="EWk-JK-CsT" firstAttribute="centerY" secondItem="Obt-bW-o5H" secondAttribute="centerY" id="WZp-Ql-cmW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mLy-CQ-IHr"/>
                     </view>
@@ -95,30 +127,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="62" translatesAutoresizingMaskIntoConstraints="NO" id="PGW-Ti-f8k">
-                                <rect key="frame" x="102" y="185.5" width="171" height="296.5"/>
+                                <rect key="frame" x="87" y="139.5" width="201" height="388.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PresentViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cey-Dy-OFe">
-                                        <rect key="frame" x="0.0" y="0.0" width="171" height="20.5"/>
+                                        <rect key="frame" x="15" y="0.0" width="171" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJP-lT-hVj">
-                                        <rect key="frame" x="27.5" y="82.5" width="116" height="30"/>
+                                        <rect key="frame" x="42.5" y="82.5" width="116" height="30"/>
                                         <state key="normal" title="OneMorePresent"/>
                                         <connections>
                                             <action selector="oneMorePresent:" destination="o7s-wj-QRg" eventType="touchUpInside" id="7Sy-VW-Ehj"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7F-dD-dT1">
+                                        <rect key="frame" x="0.0" y="174.5" width="201" height="30"/>
+                                        <state key="normal" title="dismissThenOneMorePresent"/>
+                                        <connections>
+                                            <action selector="dismissThenOneMorePresent" destination="o7s-wj-QRg" eventType="touchUpInside" id="TZ3-fr-PNl"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MD9-FV-Li3">
-                                        <rect key="frame" x="8" y="174.5" width="155" height="30"/>
+                                        <rect key="frame" x="23" y="266.5" width="155" height="30"/>
                                         <state key="normal" title="dismissThenShowAlert"/>
                                         <connections>
                                             <action selector="dismissThenShowAlert" destination="o7s-wj-QRg" eventType="touchUpInside" id="L26-rb-3OP"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OjT-Br-3ym">
-                                        <rect key="frame" x="59.5" y="266.5" width="52" height="30"/>
+                                        <rect key="frame" x="74.5" y="358.5" width="52" height="30"/>
                                         <state key="normal" title="dismiss"/>
                                         <connections>
                                             <action selector="dismiss" destination="o7s-wj-QRg" eventType="touchUpInside" id="r6F-a9-8lY"/>
@@ -144,11 +183,11 @@
             <objects>
                 <viewController id="fEy-bG-fVZ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xDR-8a-5Sg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PerformSegue2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izu-2B-D6a">
-                                <rect key="frame" x="127" y="313" width="121" height="21"/>
+                                <rect key="frame" x="127" y="323" width="121" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -172,11 +211,11 @@
             <objects>
                 <viewController id="zV3-j4-xkx" customClass="PerformSegueViewController" customModule="DKChangeView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MLO-NF-enF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="U2V-Vl-mxX">
-                                <rect key="frame" x="76.5" y="167.5" width="222" height="312.5"/>
+                                <rect key="frame" x="76.5" y="177.5" width="222" height="312.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PerformSegueViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6u-PO-53g">
                                         <rect key="frame" x="0.0" y="0.0" width="222" height="20.5"/>
@@ -240,10 +279,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="FAP-8A-BSW">
-                                <rect key="frame" x="138" y="223.5" width="99" height="220"/>
+                                <rect key="frame" x="131.5" y="181" width="112.5" height="305.5"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNz-Nc-o2c">
+                                        <rect key="frame" x="0.0" y="0.0" width="112.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGH-Dl-s10">
-                                        <rect key="frame" x="0.0" y="0.0" width="99" height="30"/>
+                                        <rect key="frame" x="6.5" y="85.5" width="99" height="30"/>
                                         <state key="normal" title="performSegue"/>
                                         <connections>
                                             <action selector="performSegue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E20-JS-CjF"/>
@@ -251,7 +296,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKj-Mu-b7F">
-                                        <rect key="frame" x="23" y="95" width="53" height="30"/>
+                                        <rect key="frame" x="29.5" y="180.5" width="53" height="30"/>
                                         <state key="normal" title="present"/>
                                         <connections>
                                             <action selector="present:" destination="Hfm-xd-NEJ" eventType="touchUpInside" id="8VV-r1-iO8"/>
@@ -259,7 +304,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1i-Ph-LuM">
-                                        <rect key="frame" x="32.5" y="190" width="34" height="30"/>
+                                        <rect key="frame" x="39" y="275.5" width="34" height="30"/>
                                         <state key="normal" title="push"/>
                                         <connections>
                                             <action selector="push:" destination="Hfm-xd-NEJ" eventType="touchUpInside" id="7t6-Cy-Yaq"/>
@@ -326,7 +371,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tTS-Yf-Nay"/>
+        <segue reference="cLB-0R-4it"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1.circle" catalog="system" width="128" height="121"/>

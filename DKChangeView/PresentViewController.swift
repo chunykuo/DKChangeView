@@ -18,6 +18,24 @@ class PresentViewController: UIViewController
         view.backgroundColor = UIColor.orange
     }
     
+    @IBAction func oneMorePresent(_ sender: Any)
+    {
+        if let controller = storyboard?.instantiateViewController(withIdentifier: "PresentViewController")
+        {
+            present(controller, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func dismissThenOneMorePresent() {
+        let presentingVC = self.presentingViewController
+        dismiss(animated: true) {
+            if let controller = self.storyboard?.instantiateViewController(withIdentifier: "PresentViewController")
+            {
+                presentingVC?.present(controller, animated: true, completion: nil)
+            }
+        }
+    }
+    
     @IBAction func dismissThenShowAlert() {
         let alertViewController = UIAlertController(title: "Title", message: "message", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -26,14 +44,6 @@ class PresentViewController: UIViewController
             let topViewController = self.getRootController().topMostViewController()
             topViewController.present(alertViewController, animated: true, completion: nil)
         })
-    }
-    
-    @IBAction func oneMorePresent(_ sender: Any)
-    {
-        if let controller = storyboard?.instantiateViewController(withIdentifier: "PresentViewController")
-        {
-            present(controller, animated: true, completion: nil)
-        }
     }
     
     @IBAction func dismiss()

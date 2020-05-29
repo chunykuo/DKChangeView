@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		023678712451A06500B28BDB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 023678702451A06500B28BDB /* README.md */; };
 		023F578D22D5DD170077C359 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023F578C22D5DD170077C359 /* AppDelegate.swift */; };
 		023F578F22D5DD170077C359 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023F578E22D5DD170077C359 /* ViewController.swift */; };
 		023F579222D5DD170077C359 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 023F579022D5DD170077C359 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		023678702451A06500B28BDB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		023F578922D5DD170077C359 /* DKChangeView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DKChangeView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		023F578C22D5DD170077C359 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		023F578E22D5DD170077C359 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 			children = (
 				023F578B22D5DD170077C359 /* DKChangeView */,
 				023F578A22D5DD170077C359 /* Products */,
+				023678702451A06500B28BDB /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +139,7 @@
 			files = (
 				023F579722D5DD190077C359 /* LaunchScreen.storyboard in Resources */,
 				023F579422D5DD190077C359 /* Assets.xcassets in Resources */,
+				023678712451A06500B28BDB /* README.md in Resources */,
 				023F579222D5DD170077C359 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

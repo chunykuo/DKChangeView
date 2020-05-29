@@ -9,6 +9,27 @@
 import UIKit
 
 class PushViewController: UIViewController {
+    
+    @IBAction func popToRootButtonPress() {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    @IBAction func showAlertThenPopToRootButtonPress() {
+        let alertViewController = UIAlertController(title: "Alert", message: "click OK will popToRoot", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+        alertViewController.addAction(okAction)
+        present(alertViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func popToRootThenShowAlertButtonPress() {
+        self.navigationController?.popToRootViewController(animated: true)
+        let alertViewController = UIAlertController(title: "Alert", message: "popToRoot Success!", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alertViewController.addAction(okAction)
+        present(alertViewController, animated: true, completion: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
