@@ -1,3 +1,9 @@
 # DKChangeView
 
-展示各種 ViewController 之間如何切換畫面，並且清楚地展示
+Demo that many method to change the view(ViewController)
+
+go to the new ViewController, by 3 way:
+
+1. performSegue
+1. present 
+1. push
