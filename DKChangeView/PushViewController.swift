@@ -24,11 +24,23 @@ class PushViewController: UIViewController {
     }
     
     @IBAction func popToRootThenShowAlertButtonPress() {
-        self.navigationController?.popToRootViewController(animated: true)
+        navigationController?.popToRootViewController(animated: true)
         let alertViewController = UIAlertController(title: "Alert", message: "popToRoot Success!", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default)
         alertViewController.addAction(okAction)
-        present(alertViewController, animated: true, completion: nil)
+        let rootViewController = getRootController().topMostViewController()
+        rootViewController.present(alertViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func popToRootThenPresentButtonPress() {
+        navigationController?.popToRootViewController(animated: true)
+        let rootViewController = getRootController().topMostViewController()
+        if let controller = storyboard?.instantiateViewController(withIdentifier: "PresentViewController")
+        {
+            rootViewController.present(controller, animated: true, completion: {
+                print("popToRootThenPresent")
+            })
+        }
     }
 
     override func viewDidLoad() {

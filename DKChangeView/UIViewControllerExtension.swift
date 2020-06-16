@@ -25,4 +25,8 @@ extension UIViewController {
         
         return self
     }
+    
+    func getRootController () -> UIViewController {
+        return (UIApplication.shared.delegate?.window!!.rootViewController)!
+    }
 }

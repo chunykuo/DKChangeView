@@ -50,10 +50,4 @@ class PresentViewController: UIViewController
     {
         dismiss(animated: true, completion: nil)
     }
-    
-
-    func getRootController () -> UIViewController {
-        return (UIApplication.shared.delegate?.window!!.rootViewController)!
-    }
-
 }
