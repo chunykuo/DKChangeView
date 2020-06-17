@@ -13,6 +13,7 @@ class ViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        title = "NavigationBar"
     }
 
     @IBAction func performSegue(_ sender: Any)
