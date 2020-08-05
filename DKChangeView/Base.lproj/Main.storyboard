@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u1l-0g-d9w">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u1l-0g-d9w">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -74,7 +74,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="77" translatesAutoresizingMaskIntoConstraints="NO" id="EWk-JK-CsT">
-                                <rect key="frame" x="98.5" y="109.5" width="178" height="448.5"/>
+                                <rect key="frame" x="98.5" y="56" width="178" height="555.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PushViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1o7-a3-dCr">
                                         <rect key="frame" x="14" y="0.0" width="150" height="20.5"/>
@@ -96,15 +96,22 @@
                                             <action selector="showAlertThenPopToRootButtonPress" destination="rdR-RX-Gdo" eventType="touchUpInside" id="FkT-aR-SUr"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTH-H5-qHe">
+                                        <rect key="frame" x="24.5" y="311.5" width="129" height="30"/>
+                                        <state key="normal" title="showAlertThenPop"/>
+                                        <connections>
+                                            <action selector="showAlertThenPopButtonPress" destination="rdR-RX-Gdo" eventType="touchUpInside" id="8sH-jF-5T3"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fN-gb-VFX">
-                                        <rect key="frame" x="0.0" y="311.5" width="178" height="30"/>
+                                        <rect key="frame" x="0.0" y="418.5" width="178" height="30"/>
                                         <state key="normal" title="popToRootThenShowAlert"/>
                                         <connections>
                                             <action selector="popToRootThenShowAlertButtonPress" destination="rdR-RX-Gdo" eventType="touchUpInside" id="adv-UL-04Q"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qz9-cT-Y6t">
-                                        <rect key="frame" x="8.5" y="418.5" width="161" height="30"/>
+                                        <rect key="frame" x="8.5" y="525.5" width="161" height="30"/>
                                         <state key="normal" title="popToRootThenPresent"/>
                                         <connections>
                                             <action selector="popToRootThenPresentButtonPress" destination="rdR-RX-Gdo" eventType="touchUpInside" id="by1-sV-16X"/>
@@ -120,6 +127,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mLy-CQ-IHr"/>
                     </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="1o7-a3-dCr" id="TEl-S9-nzb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E3k-04-WmW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
