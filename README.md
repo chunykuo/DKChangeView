@@ -1,6 +1,6 @@
 # DKChangeView
 
-Demo that many method to change the view(ViewController)
+Demo that many way to change the view(ViewController)
 
 go to the new ViewController, by 3 way:
 
