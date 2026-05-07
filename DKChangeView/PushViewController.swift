@@ -10,6 +10,8 @@ import UIKit
 
 class PushViewController: UIViewController {
     
+    @IBOutlet weak var titleLabel: UILabel!
+    
     @IBAction func popToRootButtonPress() {
         self.navigationController?.popToRootViewController(animated: true)
     }
@@ -18,6 +20,15 @@ class PushViewController: UIViewController {
         let alertViewController = UIAlertController(title: "Alert", message: "click OK will popToRoot", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             self.navigationController?.popToRootViewController(animated: true)
+        }
+        alertViewController.addAction(okAction)
+        present(alertViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func showAlertThenPopButtonPress() {
+        let alertViewController = UIAlertController(title: "Alert", message: "click OK will popToRoot", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            self.navigationController?.popViewController(animated: true)
         }
         alertViewController.addAction(okAction)
         present(alertViewController, animated: true, completion: nil)
@@ -47,6 +58,8 @@ class PushViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor.yellow
+        let pushCount = self.navigationController?.viewControllers.count
+        titleLabel.text = "PushViewController" + "[\(String(describing: pushCount))]"
     }
     
 
